@@ -1,0 +1,65 @@
+% ------------------------------------------------------------------------------
+% LaTeX Template: Titlepage
+% This is a title page template which be used for both articles and reports.
+%
+% Copyright: http://www.howtotex.com/
+% Date: April 2011
+% ------------------------------------------------------------------------------
+%
+% ------------------------------------------------------------------------------
+% Definitions (do not change this)
+% ------------------------------------------------------------------------------
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
+
+\makeatletter							% Title
+\def\printtitle{%						
+    {\centering \@title\par}}
+\makeatother									
+
+\makeatletter							% Author
+\def\printauthor{%					
+    {\centering \large \@author}}				
+\makeatother							
+
+% ------------------------------------------------------------------------------
+% Metadata (Change this)
+% ------------------------------------------------------------------------------
+
+
+
+\begin{titlepage}
+% ------------------------------------------------------------------------------
+% Maketitle
+% ------------------------------------------------------------------------------
+\thispagestyle{empty}				% Remove page numbering on this page
+
+\printtitle									% Print the title data as defined above
+  	\vfill
+
+
+\large
+
+\begin{center}
+	\emph{Author:}\\
+	Emmanuel Senft \\
+[1.cm]	
+	\emph{Supervisors:}\\
+	Prof. Tony Belpaeme (Director of Study)\\
+	Dr. Paul Baxter\\
+	Dr. S\'{e}verin Lemaignan\\
+[1.5cm]
+
+	Centre for Robotics and Neural Systems\\
+	Plymouth University, U.K.\\
+[1.5cm]
+\normalsize 
+	\today
+\end{center}
+% ------------------------------------------------------------------------------
+% Begin document
+% ------------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------------
+% End document
+% ------------------------------------------------------------------------------
+\end{titlepage}

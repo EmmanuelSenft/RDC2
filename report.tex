@@ -1,0 +1,41 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[pdftex]{graphicx} %for embedding images
+\usepackage{url} %for proper url entries
+\usepackage{comment} %for proper url entries
+\usepackage[bookmarks, colorlinks=false, pdfborder={0 0 0}, pdftitle={<pdf title here>}, pdfauthor={<author's name here>}, pdfsubject={<subject here>}, pdfkeywords={<keywords here>}]{hyperref} %for creating links in the pdf version and other additional pdf attributes, no effect on the printed document
+%\usepackage[final]{pdfpages} %for embedding another pdf, remove if not required
+\title{	\normalsize \textsc{RDC.2 - Transfer Report} 	% Subtitle of the document
+		 	\\[2.0cm]													% 2cm spacing
+			\HRule{0.5pt} \\										% Upper rule
+			\LARGE \textbf{\uppercase{Action Selection for Social Human-Robot Interactions}}	% Title
+			\HRule{2pt} \\ [0.5cm]								% Lower rule + 0.5cm spacing
+									% Todays date
+		}
+
+\author{
+		Emmanuel Senft\\
+}
+\begin{document}
+\renewcommand\bibname{References} %Renames "Bibliography" to "References" on ref page
+
+%include other pages
+\input{./title.tex}
+%\input{./certificate.tex}
+%\input{./abstract.tex}
+\begin{comment}
+\pagenumbering{roman} %numbering before main content starts
+\tableofcontents
+\listoffigures
+
+\newpage
+\pagenumbering{arabic} %reset numbering to normal for the main content
+
+\input{./prob-definition.tex} %objective changed to problem definition
+\input{./introduction.tex} %literature survey included in this
+\input{./work-done.tex}
+\input{./future-work.tex}
+\input{./conclusion.tex}
+\input{./acknow.tex}
+\input{./ref.tex}
+\end{comment}
+\end{document}
