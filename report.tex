@@ -15,6 +15,15 @@
 \author{
 		Emmanuel Senft\\
 }
+
+\makeatletter
+\renewcommand{\thesection}{
+  \ifnum\c@chapter<1 \@arabic\c@section
+  \else \thechapter.\@arabic\c@section
+  \fi
+}
+\makeatother
+%
 \begin{document}
 \renewcommand\bibname{References} %Renames "Bibliography" to "References" on ref page
 
@@ -22,18 +31,26 @@
 \input{./title.tex}
 %\input{./certificate.tex}
 %\input{./abstract.tex}
-\begin{comment}
+
 \pagenumbering{roman} %numbering before main content starts
 \tableofcontents
-\listoffigures
 
 \newpage
 \pagenumbering{arabic} %reset numbering to normal for the main content
-
-\input{./prob-definition.tex} %objective changed to problem definition
 \input{./introduction.tex} %literature survey included in this
+\input{./informing.tex} %literature survey included in this
+
 \input{./work-done.tex}
 \input{./future-work.tex}
+
+\bibliographystyle{IEEEtran}
+\bibliography{./BibFile}
+\begin{comment}
+
+\listoffigures
+
+
+\input{./introduction.tex} %literature survey included in this
 \input{./conclusion.tex}
 \input{./acknow.tex}
 \input{./ref.tex}
