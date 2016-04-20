@@ -1,9 +1,148 @@
 \chapter{Informing the Research}
 
-\section{Fields of Social HRI}
+literature review was conducted concerning the action selection for social HRI.
+
+\section{Inclusion Criteria}
+
+Despite being a young field of study, HRI covers a large spectrum of different interaction between human and robots. In this review, we used the following criteria on the interaction to decide to include research paper:
+\begin{itemize}
+\item Real interaction between a robot (possibly virtual) and a human: the robot's behaviour is influenced by the human's one and vice versa.
+\item Socially interactive robots as defined in \cite{Fong2003}.  Social side of the interaction is key. (exclusion of classical industrial robots, surgery or teleoperation for example)
+\end{itemize}
+
+We define the action selection problem as finding the correct action (such as high level movement, sentence declaration, emotion display, not doing anything...) among a set of possible actions according to the current state of the world. We are focusing on which action doing, not how to do it. This is an important problem for the community as every robot interacting with humans have to face it.
+
+%HRI not the learning, but the object of learning. ? ?
+%Ascribe intentions when interacting
+
+\section{Overview of the Different Fields of Application for social HRI}
+
+Before analysing the different methods used for AS in sHRI, we will review the different fields where HRI is involved, and will use them in the next section to derive the axis of analysis used for reviewing the AS approaches.
+	
+%discriminate field of application and field of research
+%Robot are planned to be used to execute many jobs where they will have to interact with humans. In this section, we will report work currently in progress to study how robot can help humans, and how they are perceived with people they are interacting with depending the field.
+
+	
+	
+%place of assistive robotics?
+%can get ref from definition of SAR from DFS
+
+	\subsection{Home and companion}
+	
+		With the ageing of the population observed and the even more important ageing predicted (addRef), the society will have to find a way to manage this increase of population need to be taken care of. This is one of the obvious robotic market for now and the next decades, where a robot could make the difference between having to send an elderly in a home, or allowing him to stay at his place. (addRef) Using robot in these condition could reduce the quantity of staff required and so could allow government to save an important amount of budget. Today, many project all around the globe are undergoing tackling these kind of issues: Robot-Era, Accompany project, Socially Assistive Robotics (NSF), Companionable and the Robear project to cite only a small subset of them.
+		
+%introduction of Paro, Robear ? and EU ones: zora...
+Example elderly care		
+However, the acceptance of these robots in elderly care facilities or at their homes, is still a complex task. Good impact \cite{wada2004effects} but Report acceptance: staff, residents, family. -> motivation to have a robot behaving more properly
+		
+		roomba? cf The Inherent Dangers of Unidirectional Emotional Bonds between Humans and Social Robots
+		
+	\subsection{Education} 
+
+	Another field profiting for technology, but where robot are not yet used in an extensive way is education. Studies reported that individualised feedback can increase the performance of students, but due to the large number of students supervised by a single teacher this approach is often not possible. Tutor robot could provide this 1 to 1 interaction not available in current classroom without requesting to dramatically increase the number of teachers. Studies show that robots can help children to learn new skill. This effect has been shown Kennedy et al. in (cite): after having received a lesson from a robot, the child's performance to identify prime number increased compared to before the lesson. Similarly, in (addRef), Lemaignan et al. used the concept of learning by teaching with children improving their writing technique after several teaching session to a Nao.
+	
+	In (addRef James), Kennedy shown the impact of different social behaviour on the child's learning progress. 
+	
+	
+		James' work, co writer, Kanda, EASEL? + some US studies and Kanda (check James reviews/RDC to populate this part)
+	
+	\subsection{Search and rescue, and military} 
+	
+	An other field already using robots is search and rescue. After a natural or artificial catastrophe, swarm or robots could be sent to analyse the damage area and report or rescue the surviving victims of the incident. These robots will have to interact socially with two kinds of actors. For survivors, robot could be the only link they received with the external world after the accident, and these persons have high chances to be in a shocked state. In that case, a  social response is expected from the robot and it has to be carefully controlled. On the other side, the rescue team controlling is often in a stress stated to, and with more interactions with the robot, they might also develop some feeling toward the robots that they are interacting with during these tense moments as shown by the authros of \cite{fincannon2004evidence} - Add survey
+	
+	Similar human behaviour are to be expected and actually have been observed in the army. Similarly, soldiers developed feelings toward the robot: taking pictures with it, introducing it to their friends and so on \cite{garreau2007bots}. This relation can go as far as soldier risking their life to try to save the robot used by their squad \cite{singer2009wired}. In that case, the social side of the robot have to be carefully managed to prevent it to have an opposite effect that the one desired: preventing the waste of human lives.
+	
+	So robots have to adapt carefully their social behaviour to promote or demote social attachment from the persons they are interacting with.
+	
+	\subsection{Hospitality and Entertainment} 
+	
+	Robots are also used more and more extensively in the hospitality and entertainment domains. In \cite{gockley2005designing}, the authors present a robot acting as a receptionist for a 
+		museum guide, lobby...\\
+		frog robot project\footnote{https://www.frogrobot.eu/wordpress/}, roboceptionist \\
+		pet, pepper\\
+	
+	\subsection{Robot Assisted Therapy}
+		autism (DREAM), diabetes (ALIZ-E), stroke, cerebral palsy
+		Paro: Shibata..., 2005
+		nao robot!
+	
+	\subsection{Cooperative Robotic: industrial or home }
+	(joint action - anca dragan's work)
+	
+	Baxter + Sawyer
+
 
 \section{Axis of Analysis}
 
+As we have seen in the previous section. Robots are already working with sensitive persons: young children, elderlies, persons with handicap, persons in a stressed situation: victims from catastrophes or soldier for citing only a small subset of users. And in the future, due to the expected lack of workforces in many of these sectors, the number of robots is expected to rise \Todo{add number and ref}. In these contexts, the robot behaviour should be carefully manage to to produce undesired behaviour which could either harm the interaction or the interactants (physical or mentally).
+
+These potential undesired behaviours can be due to many different reasons: lack of sensory capabilities to identify necessary features, impossibility to execute the required action or more simply incorrect action policy. These two first cases are out of the scope for this literature review as the failure is not due to an imperfect ASM but to to \emph{external} factors preventing the ASM to solve a problem. 
+
+\Todo{unlikely of perfect AP}
+
+\Todo{Prevent the AS to execute crap: safety}
+
+\Todo{Allow the AS to correct weaknesses: adaptability}
+
+%Assuming that the robot is following an action policy, these undesired behaviours could arise in different cases. If we put aside the cases where the robot is not able to detect important feature to react accordingly or is not provide with an efficient mean to execute a desired action, we end up with two main cases where the robot could exhibit undesired behaviour. The first one is when the robot does not how it is supposed to react to the current environment: the state is new and the robot does not know yet how the environment would react or the state is simply not covered by the action policy. We call this case \emph{uncertainty} and the way to react to it \emph{management of uncertainty}. The second case is when the action policy is simply not adapted to the current environment. In this conditions, the robot should have a way to detect this inadequacy and find a way to correct its action policy: we call this capability \emph{adaptability}. Another characteristic key in HRI is \emph{autonomy}: it denotes to which extend the robot is able to make its decisions on its own.
+
+For this literature review, we will analyse the current state of the art in action selection for social HRI following the three axis introduced in the previous paragraphs:
+\begin{itemize}
+\item Safety
+\item Adaptability
+\item Autonomy
+\end{itemize}
+
+Of course, HRI is a large topic, and many research axis are similarly important such as complexity of the interaction, depth of the interaction, constraints put on the environment, importance of social rules... However, these axes are more related to the task involving this HRI than the ASM, so we will not use them in this literature review.
+
+	\subsection{Robustness to uncertainty} 
+	
+When human are interacting socially together, they are making use of a large modality of features to select which action executing: body language, emotion display, context... (AddRef) Every state of an interaction can be totally unique, it can never have been observed before and might never been observed after. Even if the state used by the robot for the action selection is a small subset of the real state, it can still be large enough so the robot will at one point encounter a state it has never been exposed to. Facing this case, robots have multiple choices: rely on approximation from previous knowledge, explore around this new state space or ask help from an oracle. 
+
+These different action can have an important effect on the interaction, if the approximation is not efficient, the exploration going in a non desired direction or the oracle of a poor quality, the robot could execute an action having negative impact on the interaction. We group the strategy follow in these unknown space the management of uncertainty and we define the \emph{surety} as the characteristic warranting that no action with a negative impact on the interaction or interactants will be executed by the robot.
+	
+	use safety but in non-physical safety ?
+	%Expectation to follow norms or convention != physical safety (hardware implemented)	
+	
+	%Regardless of the domain of application, the impacts of robot's action on the environment, especially on the human partners is context dependant. It implies that action mainly benign can in a specific context have a negative impact on the interaction or on the interactants: for example if the robot acts or responds in an incongruent way, it might break the interaction and lose the engagement of its partners. Especially robots being used more and more in care environment, e.g. with elderlies or in therapies for children with ASD, they are exposed to very sensible populations. And the effects of these non-desired action can have some negative impacts 	on the human-robot relation or on the therapy the patient is following.
+	
+	
+	\subsection{Adaptability}	
+	
+	
+	ES: Is it pertinent to talk about conventions here or is it better not to do it, or doing it somewhere else... example cultural pref?
+	
+	adaptabily: changing action policy overtime
+	reason: action policy not adapted to current interaction
+	reason of reason: current environment != environment original designed to interact with (reasons: changing environment over time, user personalisation or relocalisation)
+	
+	As stated before, HRI results of a complex environment, so expressing a non trivial contingent behaviour is a real challenge. Furthermore as explained by multiple research groups (addRef, ex openWOZ), the end users and the designers are often persons from different backgrounds. The designer is generally technical whilst the user can be social scientist, medical staff or retired in a home. So the exact needs of the users can be unknown by the designer or the robot can be used in a way not anticipated, and the user often does not have the technical knowledge required to change the robot behaviour. So the robot needs to have built in a adaptive part allowing to change its behaviour depending of the current requirements.
+	
+	Additionally to personalise its behaviour to its user, this adaptation can also allow a robot to follow the evolution of its user over time, or learn new behaviour to maintain engagement from its users and avoid boredom for robot used in entertainment for example. Finally, this adaptivity would allow the robot to learn from its errors (if sufficient feedback is received) and improve its behaviour over time.
+		
+		
+	\subsection{Autonomy}
+	
+	TODO: Maybe adopt a more agnostic stance, not yet include WoZ just the principle that help can be requested from human, but the robot should abuse of it.
+	
+	TODO: use: As stated before, naturally humans tend to satisfy principles 1 and 2: they are both one of the best way to ensure that a correct action will be selected (especially if they are experts), and are inherently adaptive. ? ?
+	
+	%definition of autonomy cf Beer paper
+	%range of autonomy != complexity/optimality of behaviour	
+
+	
+	The ultimate goal for a HRI is to a have a robot fully autonomous. However in some cases, some humans can have an expert knowledge which can be used by the robot to help it to manage uncertainty or to improve its adaptability. (addReg mixed initiative/shared autonomy/supervised autonomy - de palma Nimbus).				
+	In most of the interactions, some humans have the knowledge required to have a smooth interaction. These humans can either be the direct user, e.g. when the robot is used as a home companion, an expert, such as in therapies or search and in a search and rescue scenario or most of the humans for \emph{simple} task such as voice recognition or general knowledge. So robots should be able to use this knowledge to improve the interaction. For example in (addRef De Palma Nimbus), the authors propose to use crowdsourcing to help a robot for visual learning in an interactive environment. More classically, the Wizard of Oz paradigm (WoZ) is a widely	 used technique (addRef Riek) in HRI where the robot is not autonomous but teleoperated by a experimenter to emulate behaviour not yet achievable with the current technology or costly to implement. 
+	
+	However to be able to sustain long term interaction or for scalability reasons, the robots should not rely on the human as a main source of information for action selection. Furthermore over-reliance on an expert imposes a workload on them which not desirable, e.g. many studies involving robot for therapies relies on a therapist to control the robot, but this is not a sustainable solution. Similarly when the robot is present to help or entertain a user, the workload on them should be minimal: elderlies know how to bring a bottle of water, but do not want to have to pilot the robot to do it every time they need it.
+\subsection{Principles}
+	Desiderata: 
+	high uncertainty management guaranties (low risk-taking/high "surety")
+	high adaptability
+	high autonomy - i.e if humans used low workload.	
+		
+		
+%TODO: probably will have to be reformulated: often robot to help a human (home, idea of robot as assistant) - low workload + therapy, lobby, entertainment: not possible large scale without low human requirement
 \section{Review of Existing Methods for Action Selection for Social HRI}
 
 \section{Proposition}
