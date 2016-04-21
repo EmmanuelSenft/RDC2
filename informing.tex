@@ -62,21 +62,27 @@ However, the acceptance of these robots in elderly care facilities or at their h
 		pet, pepper\\
 	
 	\subsection{Robot Assisted Therapy}
-		autism (DREAM), diabetes (ALIZ-E), stroke, cerebral palsy
-		Paro: Shibata..., 2005
-		nao robot!
+	\Todo{Can be improved}
+	Robot have been used in therapy more multiple decades already. Robots have been used as physical platform to help patient to recover physically from strokes or cerebral palsy for example \Todo{AddRef if intersting}. And since around twenty years, they have also been used in more social context. For example the AuRoRA \footnote{\url{http://homepages.herts.ac.uk/~comqbr/aurora/index.php?option=com_content&view=category&id=2&Itemid=102}} which started in 1998 explored the use of robot as therapeutic tools for children with ASD \cite{dautenhahn1999}. More recently, robots have also been used with children with diabetes \Todo{AddRef Alize global} or elderlies with dementia \cite{wada2005psychological} for example.
+
+%		autism (DREAM), diabetes (ALIZ-E), stroke (physical robto), cerebral palsy
+%		Paro: Shibata..., 2005
+%		nao robot!
 	
 	\subsection{Cooperative Robotic: industrial or home }
+	
+	
 	(joint action - anca dragan's work)
 	
 	Baxter + Sawyer
 
-
+	a bit of planning HATP?
+	
 \section{Axis of Analysis}
 
-As we have seen in the previous section. Robots are already working with sensitive persons: young children, elderlies, persons with handicap, persons in a stressed situation: victims from catastrophes or soldier for citing only a small subset of users. And in the future, due to the expected lack of workforces in many of these sectors, the number of robots is expected to rise \Todo{add number and ref}. In these contexts, the robot behaviour should be carefully manage to to produce undesired behaviour which could either harm the interaction or the interactants (physical or mentally).
+As we have seen in the previous section. Robots are already working with sensitive persons: young children, elderlies, persons with handicap, persons in a stressed situation: victims from catastrophes or soldier for citing only a small subset of users. And in the future, due to the expected lack of workforce in many of these sectors, the number of robots is expected to rise \Todo{add number and ref}. In these contexts, the robot behaviour should be carefully manage not to produce undesired behaviour which could either harm the interaction or the interactants (physical or mentally).
 
-These potential undesired behaviours can be due to many different reasons: lack of sensory capabilities to identify necessary features, impossibility to execute the required action or more simply incorrect action policy. These two first cases are out of the scope for this literature review as the failure is not due to an imperfect ASM but to to \emph{external} factors preventing the ASM to solve a problem. 
+These potential undesired behaviours can be due to many different reasons: lack of sensory capabilities to identify necessary environmental features, impossibility to execute the required action or more simply incorrect action policy. These two first cases are out of the scope for this literature review as the failure is not due to an imperfect ASM but to to \emph{external} factors preventing the ASM to solve a problem. 
 
 \Todo{unlikely of perfect AP}
 
@@ -95,22 +101,24 @@ For this literature review, we will analyse the current state of the art in acti
 
 Of course, HRI is a large topic, and many research axis are similarly important such as complexity of the interaction, depth of the interaction, constraints put on the environment, importance of social rules... However, these axes are more related to the task involving this HRI than the ASM, so we will not use them in this literature review.
 
-	\subsection{Robustness to uncertainty} 
-	
-When human are interacting socially together, they are making use of a large modality of features to select which action executing: body language, emotion display, context... (AddRef) Every state of an interaction can be totally unique, it can never have been observed before and might never been observed after. Even if the state used by the robot for the action selection is a small subset of the real state, it can still be large enough so the robot will at one point encounter a state it has never been exposed to. Facing this case, robots have multiple choices: rely on approximation from previous knowledge, explore around this new state space or ask help from an oracle. 
+%Place of the user model in the AS: inputed manually by a human, observed from HHI, learnt online...
 
-These different action can have an important effect on the interaction, if the approximation is not efficient, the exploration going in a non desired direction or the oracle of a poor quality, the robot could execute an action having negative impact on the interaction. We group the strategy follow in these unknown space the management of uncertainty and we define the \emph{surety} as the characteristic warranting that no action with a negative impact on the interaction or interactants will be executed by the robot.
+	\subsection{Safety} 
 	
-	use safety but in non-physical safety ?
+First of all, to clarify we define \emph{safety} not only as physical safety, a topic heavily researched in the hardware development in robot, but also moral or mental safety. HHI are controlled by an immense set of social rules, or expectations and convention, and people interacting with each other expect the other party to follow a subset of these rules. It is expected and observed \Todo{AddRef} that these expectations are also reported on robots in HRI. And failing to follow this conventions can have an harming impact on the interaction and the human can also be morally hurt. This effect is even increased when interacting with sensitive populations such as children, elderlies or persons with handicap.
+
+We will use the safety axis to analyse how both the physical and moral aspect of safety is taken into account by the ASM, and how they incorporate a way to guarantee that the action executed by the robot is not breaking rules.
+	
+%When human are interacting socially together, they are making use of a large modality of features to select which action executing: body language, emotion display, context... (AddRef) Every state of an interaction can be totally unique, it can never have been observed before and might never been observed after. Even if the state used by the robot for the action selection is a small subset of the real state, it can still be large enough so the robot will at one point encounter a state it has never been exposed to. Facing this case, robots have multiple choices: rely on approximation from previous knowledge, explore around this new state space or ask help from an oracle. 
+
+%These different action can have an important effect on the interaction, if the approximation is not efficient, the exploration going in a non desired direction or the oracle of a poor quality, the robot could execute an action having negative impact on the interaction. We group the strategy follow in these unknown space the management of uncertainty and we define the \emph{surety} as the characteristic warranting that no action with a negative impact on the interaction or interactants will be executed by the robot.
+	
 	%Expectation to follow norms or convention != physical safety (hardware implemented)	
 	
 	%Regardless of the domain of application, the impacts of robot's action on the environment, especially on the human partners is context dependant. It implies that action mainly benign can in a specific context have a negative impact on the interaction or on the interactants: for example if the robot acts or responds in an incongruent way, it might break the interaction and lose the engagement of its partners. Especially robots being used more and more in care environment, e.g. with elderlies or in therapies for children with ASD, they are exposed to very sensible populations. And the effects of these non-desired action can have some negative impacts 	on the human-robot relation or on the therapy the patient is following.
 	
 	
 	\subsection{Adaptability}	
-	
-	
-	ES: Is it pertinent to talk about conventions here or is it better not to do it, or doing it somewhere else... example cultural pref?
 	
 	adaptabily: changing action policy overtime
 	reason: action policy not adapted to current interaction
@@ -122,6 +130,8 @@ These different action can have an important effect on the interaction, if the a
 		
 		
 	\subsection{Autonomy}
+
+	The third axis we will use in this literature review is the autonomy. As stated by Beer and colleagues in \cite{beer2014toward}, autonomy is organised following a spectrum from no autonomy at all: a human is totally controlling the robot (doing sensory perception, analysis and action selection) to a full autonomy: the robot is capable to sense and act in it's environment without relying at all on a human.
 	
 	TODO: Maybe adopt a more agnostic stance, not yet include WoZ just the principle that help can be requested from human, but the robot should abuse of it.
 	
@@ -131,13 +141,16 @@ These different action can have an important effect on the interaction, if the a
 	%range of autonomy != complexity/optimality of behaviour	
 
 	
-	The ultimate goal for a HRI is to a have a robot fully autonomous. However in some cases, some humans can have an expert knowledge which can be used by the robot to help it to manage uncertainty or to improve its adaptability. (addReg mixed initiative/shared autonomy/supervised autonomy - de palma Nimbus).				
+	The ultimate goal for a HRI is to a have a robot fully autonomous. However in some cases, some humans can have an expert knowledge which can be used by the robot to help it to manage uncertainty or to improve its adaptability. (addRef mixed initiative/shared autonomy/supervised autonomy - de palma Nimbus).				
 	In most of the interactions, some humans have the knowledge required to have a smooth interaction. These humans can either be the direct user, e.g. when the robot is used as a home companion, an expert, such as in therapies or search and in a search and rescue scenario or most of the humans for \emph{simple} task such as voice recognition or general knowledge. So robots should be able to use this knowledge to improve the interaction. For example in (addRef De Palma Nimbus), the authors propose to use crowdsourcing to help a robot for visual learning in an interactive environment. More classically, the Wizard of Oz paradigm (WoZ) is a widely	 used technique (addRef Riek) in HRI where the robot is not autonomous but teleoperated by a experimenter to emulate behaviour not yet achievable with the current technology or costly to implement. 
 	
 	However to be able to sustain long term interaction or for scalability reasons, the robots should not rely on the human as a main source of information for action selection. Furthermore over-reliance on an expert imposes a workload on them which not desirable, e.g. many studies involving robot for therapies relies on a therapist to control the robot, but this is not a sustainable solution. Similarly when the robot is present to help or entertain a user, the workload on them should be minimal: elderlies know how to bring a bottle of water, but do not want to have to pilot the robot to do it every time they need it.
+	
 \subsection{Principles}
+
+
 	Desiderata: 
-	high uncertainty management guaranties (low risk-taking/high "surety")
+	high safety
 	high adaptability
 	high autonomy - i.e if humans used low workload.	
 		
